@@ -11,3 +11,6 @@
 .navbar-li{
     @apply relative after:top-0 after:w-0 after:h-0 hover:after:w-full hover:after:h-full after:origin-center after:duration-500 after:absolute after:bg-[blue] after:right-0 w-max h-max p-2 after:rounded-md duration-300 ease-in-out origin-center;
 }
+.standard-p{
+    @apply text-[1rem] px-2 mt-2;
+}

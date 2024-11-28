@@ -50,7 +50,7 @@ const Home = () => {
         <header className="flex justify-between">
           <h2 className="text-4xl font-semibold text-center ">Articles</h2>
           <button className="border border-black border-solid">
-            See all articles {"=>"}{" "}
+            <a href="/signup">See all articles {"=>"}{" "}</a>
           </button>
         </header>
         <section className="grid grid-cols-3 gap-6">

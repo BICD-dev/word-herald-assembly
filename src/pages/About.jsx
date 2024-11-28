@@ -2,12 +2,12 @@ const About = () => {
   return (
     <div className=" mt-[80px]">
       {/* // initial paragraph talking about the church, its mission and its vision */}
-      <section className="bg-red-500 h-2/5 w-screen p-[4rem]">
+      <section className="bg-red-500 h-2/5 w-full p-[4rem]">
         <h2 className="font-bold text-7xl text-white">OUR STORY</h2>
       </section>
 
-      <section className="mx-6">
-        <p>
+      <section className="mt-3 mx-6 ">
+        <p className="standard-p">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit officiis
           quod voluptate nisi aspernatur porro possimus dolor quia consectetur
           eos quo ratione, corporis esse tempora magni. Nostrum soluta
@@ -33,16 +33,30 @@ const About = () => {
           accusantium, expedita incidunt temporibus accusamus magni numquam iure
           quisquam consectetur cupiditate recusandae rerum?
         </p>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus
-          necessitatibus, doloremque eaque cumque libero mollitia atque sint est
-          quam maiores unde adipisci ullam ratione facilis ipsum voluptate,
-          dolores, iste accusantium. Lorem ipsum dolor sit amet consectetur
-          adipisicing elit. Labore, nostrum voluptates. Eius ad dolores illo
-          perspiciatis nihil assumenda sit iure quam adipisci hic. Reiciendis
-          iste ut qui libero labore dignissimos.
-        </p>
       </section>
+      {/* pastor section */}
+        <h2 className="standard-h2">Meet the Pastors</h2>
+      <section className="h-2/5 w-screen grid grid-cols-3">
+        <span className="w-fit h-full text-blue-500 shadow-lg p-4 rounded-lg ">
+          {/* <img src="" alt="pastor rebecca" /> */}
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint hic
+            nesciunt non suscipit. Asperiores unde ex accusantium quas eaque
+            aut? Culpa suscipit nulla rerum, sequi deleniti officiis et
+            voluptates earum.
+          </p>
+        </span>
+        <span className="w-fit h-full text-blue-500 shadow-xl p-2 rounded-lg">
+          {/* <img src="" alt="pastor rebecca" /> */}
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint hic
+            nesciunt non suscipit. Asperiores unde ex accusantium quas eaque
+            aut? Culpa suscipit nulla rerum, sequi deleniti officiis et
+            voluptates earum.
+          </p>
+        </span>
+      </section>
+
       {/* section showing the founders and alumni pics*/}
     </div>
   );

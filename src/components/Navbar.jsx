@@ -24,7 +24,7 @@ const Navbar = () => {
             <Link to="/prayer" className="z-50">Prayer for salvation</Link>
           </li>
         </ol>
-        <div className=" hover:underline font-semibold bg-[blue] rounded-md text-white p-2">
+        <div className=" font-semibold hover:bg-yellow-700 bg-yellow-600 rounded-md text-white p-2">
         <Link to="/give">DONATE</Link>
         </div>
       </div>
