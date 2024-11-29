@@ -8,9 +8,12 @@ import Give from "./pages/Give";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import SignIn from "./pages/SignIn";
-import Articles from "./pages/ArticlesList";
+import ArticlesList from "./pages/ArticlesList";
 import SignUp from "./pages/SignUp";
 import Create from "./components/Create";
+import ArticleDetail from "./pages/ArticleDetails";
+import PrivateRoute from "./components/PrivateRoute"; // Ensure this path is correct
+import Dashboard from "./pages/Dashboard";
 function App() {
   
   return (
@@ -22,9 +25,15 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/prayer" element={<SalvationPrayer />} />
         <Route path="/give" element={<Give />} />
+        <Route path="/dashboard" element = {
+          <PrivateRoute>
+            <Dashboard />
+          </PrivateRoute>
+        } />
         <Route path="/signin" element= {<SignIn />} />  
         <Route path="/signup" element = {<SignUp/>} />
-        <Route path="/articles" element= {<Articles />} />  
+        <Route path="/articlesList" element= {<ArticlesList />} />  
+        <Route path="/articlesList/:id" element= {<ArticleDetail />} />
         <Route path="/create" element = {<Create />} />
         <Route path="*" element={<Home />} />
       </Routes>

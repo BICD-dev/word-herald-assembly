@@ -1,18 +1,22 @@
 import { auth } from "../config/firebase";
-import { createUserWithEmailAndPassword } from "firebase/auth";
+import { signInWithEmailAndPassword } from "firebase/auth";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 //NP6J-7YSY
 
 export const Auth = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const navigate = useNavigate();
+
   const handleSignIn = async (e) => {
     e.preventDefault();
     //vincentopemipo7@gmailcom
     try {
-      await createUserWithEmailAndPassword(auth, email, password);
+      await signInWithEmailAndPassword(auth, email, password);
+      navigate('/dashboard')
     } catch (error) {
-      console.error(error.message);
+      console.error('Login failed ', error.message);
     }
   };
  

@@ -25,12 +25,15 @@ const ArticlesList = () => {
   }, []);
 
   return (
-    <div className="mt-[80px]">
+    <div className="mt-[80px] grid grid-cols-4">
       {articles.map((article) => (
         <div key={article.id} className="mt-2 px-4 border border-solid border-black-500 w-fit">
-          <h1>{article.title}</h1>
-          <p>{article.summary}</p>
+          <h1 className="text-xl text-center font-semibold capitalize">{article.title}</h1>
+          < p className="">{article.summary}</p>
           <p>Written by { article.author}</p>
+          <button className="bg-orange-600 text-white rounded-2xl p-1 px-2 mt-2">
+              <a href="/blogs">Read More..</a>.
+            </button>
         </div>
       ))}
     </div>

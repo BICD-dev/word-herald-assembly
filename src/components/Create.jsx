@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { db } from "../config/firebase";
+import { db, auth } from "../config/firebase";
 import { addDoc, collection} from "firebase/firestore";
 
 const Create = () => {
@@ -9,12 +9,16 @@ const Create = () => {
   const [author, setAuthor] = useState("");
   const [isPending, setIsPending] = useState(false);
 
-  const handleSubmit = async(e) => {
+  const handleCreate = async(e) => {
     e.preventDefault();
     try{
 
       setIsPending(true);
-      await addDoc(collection(db, "articles"),{title: title, body: body, summary: summary, author: author});
+      await addDoc(collection(db, "articles"),{title: title, body: body, summary: summary, author: author, userId: auth?.currentUser?.uid  });
+      setTitle("");
+      setBody("");
+      setSummary("");
+      setAuthor("");
       setIsPending(false);
     } catch(error){
       console.error(error.message);
@@ -25,7 +29,7 @@ const Create = () => {
     <div>
       <div className="mt-[80px] mb-4 h-screen">
         <h1 className="text-4xl font-bold text-center">Create new blog</h1>
-        <form onSubmit={handleSubmit} className="px-4">
+        <form onSubmit={handleCreate} className="px-4">
           <label> Blog title: </label>
           <input
             type="text"
