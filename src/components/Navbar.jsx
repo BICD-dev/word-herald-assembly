@@ -25,7 +25,7 @@ const Navbar = () => {
           </li>
         </ol>
         <div className=" font-semibold hover:bg-yellow-700 bg-yellow-600 rounded-md text-white p-2">
-        <Link to="/give">DONATE</Link>
+        <Link to="/give">GIVE</Link>
         </div>
       </div>
     </>

@@ -69,7 +69,7 @@ export const Auth = () => {
         onClick = {handleSignIn}
         className="w-full py-2 px-4 bg-blue-600 text-white rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
       >
-        Submit
+        Submit  
       </button>
       <p className="mt-3">Don&apos;t haven an account? <a href="/signup" className="text-blue-500 hover:underline">Sign up</a></p>
 
