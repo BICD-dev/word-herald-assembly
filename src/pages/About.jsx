@@ -2,7 +2,7 @@ const About = () => {
   return (
     <div className=" mt-[80px]">
       {/* // initial paragraph talking about the church, its mission and its vision */}
-      <section className="bg-red-500 h-2/5 w-full p-[4rem]">
+      <section className="px-6 py-10 bg-sky-500 w-full h-full">
         <h2 className="font-bold text-7xl text-white">OUR STORY</h2>
       </section>
 
