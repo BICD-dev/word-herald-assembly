@@ -19,10 +19,10 @@ const Home = () => {
         </h1>
       </div>
       {/* announcement section */}
-      <div className="mt-9 mx-6 " data-aos="fade-in">
+      <div className="mt-9 mx-6 " data-aos="fade-up">
         <h2 className="text-4xl font-semibold text-center ">Announcements</h2>
         <section className="grid grid-cols-3 gap-6 mt-12 mb-12">
-          <span className="announcement-span" data-aos="fade-up">
+          <span className="announcement-span" >
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis ea
               expedita repellendus vero eveniet, minima voluptatem ut quas,
@@ -30,7 +30,7 @@ const Home = () => {
               in? Dolorum, voluptatum est?
             </p>
           </span>
-          <span className="announcement-span" data-aos="fade-up">
+          <span className="announcement-span" >
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis ea
               expedita repellendus vero eveniet, minima voluptatem ut quas,
@@ -38,7 +38,7 @@ const Home = () => {
               in? Dolorum, voluptatum est?
             </p>
           </span>
-          <span className="announcement-span" data-aos="fade-up">
+          <span className="announcement-span" >
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis ea
               expedita repellendus vero eveniet, minima voluptatem ut quas,
@@ -46,7 +46,7 @@ const Home = () => {
               in? Dolorum, voluptatum est?
             </p>
           </span>
-          <span className="announcement-span" data-aos="fade-up">
+          <span className="announcement-span" >
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis ea
               expedita repellendus vero eveniet, minima voluptatem ut quas,
@@ -69,7 +69,7 @@ const Home = () => {
           <span className="" >
             <h2 className="standard-h2 ">Suffering for being a Christian</h2>
             <p>
-              Many Christians will most likely not want to listen to someone wo
+              Many Christians will most likely not want to listen to someone who
               tells them that they&apos;ll have to suffer in this world.
               You&apos;ll probably hear responses such as &quot;Christ has
               suffered so that i won&apos;t have to suffer&quot;, but what

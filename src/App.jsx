@@ -10,8 +10,7 @@ import Footer from "./components/Footer";
 import SignIn from "./pages/SignIn";
 import ArticlesList from "./pages/ArticlesList";
 import SignUp from "./pages/SignUp";
-import Create from "./components/Create";
-import ArticleDetail from "./pages/ArticleDetails";
+import ArticleDetails from "./pages/ArticleDetails";
 import PrivateRoute from "./components/PrivateRoute"; // Ensure this path is correct
 import Dashboard from "./pages/Dashboard";
 function App() {
@@ -33,8 +32,7 @@ function App() {
         <Route path="/signin" element= {<SignIn />} />  
         <Route path="/signup" element = {<SignUp/>} />
         <Route path="/articlesList" element= {<ArticlesList />} />  
-        <Route path="/articlesList/:id" element= {<ArticleDetail />} />
-        <Route path="/create" element = {<Create />} />
+        <Route path="/articlesList/:id" element= {<ArticleDetails />} />
         <Route path="*" element={<Home />} />
       </Routes>
       <Footer />

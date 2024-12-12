@@ -8,9 +8,10 @@ export const Auth = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
-
+  console.log(auth?.currentUser?.email);
   const handleSignIn = async (e) => {
     e.preventDefault();
+
     //vincentopemipo7@gmailcom
     try {
       await signInWithEmailAndPassword(auth, email, password);
