@@ -1,9 +1,15 @@
 import CreateAnnouncement from "../components/CreateAnnouncement";
 import CreateArticle from "../components/CreateArticle";
+import { getAuth, signOut } from "firebase/auth";
+import { useNavigate } from "react-router-dom";
 const Dashoboard = () => {
-  const handleLogout = () => {
+  const navigate = useNavigate();
+  const handleLogout = async() => {
     try{
-        console.log("logged out");
+        // console.log("logged out");
+        const auth = getAuth();
+        await signOut(auth);
+        navigate("/signin");
         
     }catch(err){
         console.error(err.message)
