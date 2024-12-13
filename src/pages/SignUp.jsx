@@ -95,7 +95,7 @@ const SignUp = () => {
           >Re enter password</label>
           <input
             type="password"
-            id="password"
+            id="repassword"
             name="password"
             onChange={(e) => setReEntryPassword(e.target.value)}
             placeholder="Re enter your password"

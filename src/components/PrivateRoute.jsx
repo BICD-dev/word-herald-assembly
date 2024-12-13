@@ -9,7 +9,7 @@ const PrivateRoute = ({ children }) => {
              <div className="mt-[80px]">Loading</div>
             );//Loading component will replace this
     } 
-    return user.uid == "P3gMonrHNxSWr8vhx34WifCceM32" ? children : <Navigate to ="/signin" />
+    return user.uid == "P3gMonrHNxSWr8vhx34WifCceM32" || user.uid == "duRndveHlGhOV1YcPQ0t8vYYwm63" ? children : <Navigate to ="/signin" />
     
 }
 PrivateRoute.propTypes = {
