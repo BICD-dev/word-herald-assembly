@@ -16,7 +16,7 @@ const Dashoboard = () => {
         <h1 className="font-semibold text-[1.5rem] text-center py-2">Welcome, Name</h1>
         <button
           className="w-[full] py-2 px-4 sm:mx-6 mb-2 bg-black text-white rounded-md hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
-          ><a href="/articleList">See all Articles</a></button>
+          ><a href="/articlesList">See all Articles</a></button>
         <button
           type="submit"
           onClick={handleLogout}
