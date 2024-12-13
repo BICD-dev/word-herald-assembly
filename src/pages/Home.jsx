@@ -21,23 +21,7 @@ const Home = () => {
       {/* announcement section */}
       <div className="mt-9 mx-6 " data-aos="fade-up">
         <h2 className="text-4xl font-semibold text-center ">Announcements</h2>
-        <section className="grid grid-cols-3 gap-6 mt-12 mb-12">
-          <span className="announcement-span" >
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis ea
-              expedita repellendus vero eveniet, minima voluptatem ut quas,
-              omnis architecto delectus sit, laborum quo voluptas necessitatibus
-              in? Dolorum, voluptatum est?
-            </p>
-          </span>
-          <span className="announcement-span" >
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis ea
-              expedita repellendus vero eveniet, minima voluptatem ut quas,
-              omnis architecto delectus sit, laborum quo voluptas necessitatibus
-              in? Dolorum, voluptatum est?
-            </p>
-          </span>
+        <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12 mb-12">
           <span className="announcement-span" >
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis ea
@@ -65,8 +49,8 @@ const Home = () => {
             <a href="/articlesList">See all articles {"=>"} </a>
           </button>
         </header>
-        <section className=" p-4 border border-solid border-black ">
-          <span className="" >
+        <section className=" p-4  ">
+          <span className=" shadow-lg" >
             <h2 className="standard-h2 ">Suffering for being a Christian</h2>
             <p>
               Many Christians will most likely not want to listen to someone who
