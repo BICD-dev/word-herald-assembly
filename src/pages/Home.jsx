@@ -45,9 +45,9 @@ const Home = () => {
       <div className="mt-9 mx-6 mb-6">
         <header className="flex justify-between mb-2">
           <h2 className="text-4xl font-semibold text-center ">Articles</h2>
-          <button className="border border-black border-solid">
-            <a href="/articlesList">See all articles {"=>"} </a>
-          </button>
+          <button
+          className="w-[full] py-2 px-4 sm:mx-6 mb-2 bg-black text-white rounded-md hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+          ><a href="/articleList">See all Articles</a></button>
         </header>
         <section className=" p-4  ">
           <span className=" shadow-lg" >

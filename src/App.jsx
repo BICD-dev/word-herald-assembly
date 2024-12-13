@@ -16,7 +16,7 @@ import Dashboard from "./pages/Dashboard";
 function App() {
   
   return (
-    <>
+    <div className="flex flex-col min-h-screen">
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
@@ -36,7 +36,7 @@ function App() {
         <Route path="*" element={<Home />} />
       </Routes>
       <Footer />
-    </>
+    </div>
   );
 }
 
