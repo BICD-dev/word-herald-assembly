@@ -7,7 +7,7 @@ const Navbar = () => {
     <>
       <div
         className={`flex justify-between items-center text-black py-6 
-        lg:px-8 md:px-32 px-8 bg-white drop-shadow-xl fixed top-0 w-screen z-70 `}
+        lg:px-8 md:px-32 px-8 bg-white drop-shadow-xl fixed top-0 w-screen z-70`}
       >
         <h1 className="lg:text-[2rem] md:text-2xl text-2xl font-extrabold ">
           Word Herald Assembly

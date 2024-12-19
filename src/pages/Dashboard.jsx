@@ -18,15 +18,15 @@ const Dashoboard = () => {
   return (
     <>
       <h1 className="mt-[110px] mx-6 font-semibold text-[1.5rem] text-center py-2">Admin Dashboard</h1>
-      <div className=" mx-6 h-screen grid grid-cols-1 sm:grid-cols-3 overflow-auto"> 
+      <div className=" mx-6 h-screen grid grid-cols-1 sm:grid-cols-3  overflow-auto"> 
         <h1 className="font-semibold text-[1.5rem] text-center py-2">Welcome, Name</h1>
         <button
-          className="w-[full] py-2 px-4 sm:mx-6 mb-2 bg-black text-white rounded-md hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+          className="w-[full] py-2 px-4 sm:mx-6 mb-2 bg-black sm:mb-[9rem] text-white rounded-md hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
           ><a href="/articlesList">See all Articles</a></button>
         <button
           type="submit"
           onClick={handleLogout}
-          className="w-full  py-2 px-4 mr-7 mb-2 bg-red-600 text-white rounded-md hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+          className="w-full  py-2 px-4 mr-7 mb-2 bg-red-600 sm:mb-[9rem] text-white rounded-md hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
         >
           Log out
         </button>

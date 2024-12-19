@@ -28,7 +28,7 @@ const CreateArticle = () => {
   return (
     <div>
       <div className="mt-4 mb-4 h-2/3">
-        <h1 className="text-4xl font-bold text-center mb-4">Create new blog</h1>
+        <h1 className="text-4xl font-bold text-center mb-4">Create new Article</h1>
         <form onSubmit={handleCreate} className="px-4">
           <label> Article title: </label>
           <input

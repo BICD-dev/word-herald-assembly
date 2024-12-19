@@ -29,12 +29,12 @@ const ArticlesList = () => {
   }, []);
 
   return (
-    <div className="mt-[100px] ml-2 grid grid-cols-4">
+    <div className="mt-[100px] ml-2 grid grid-cols-1 sm:gird-cols-2 md:grid-cols-3 lg:grid-cols-4">
       {isPending && <SkeletalLoader />}
       {articles.map((article) => (
         <div
           key={article.id}
-          className="mt-2 px-4 border border-solid border-black-500 w-fit"
+          className="mt-2 px-4 py-4 announcement-span w-fit"
         >
           <Link to={`/articlesList/${article.id}`}>
             <h1 className="text-xl text-center font-semibold capitalize">
@@ -51,6 +51,5 @@ const ArticlesList = () => {
     </div>
   );
 };
-//vincentopemipo7@gmail.com
 
 export default ArticlesList;

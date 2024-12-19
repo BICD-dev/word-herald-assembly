@@ -5,17 +5,18 @@ import { useNavigate } from "react-router-dom";
 //NP6J-7YSY
 
 export const Auth = () => {
+
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+
   const navigate = useNavigate();
-  console.log(auth?.currentUser?.email);
   const handleSignIn = async (e) => {
     e.preventDefault();
 
     //vincentopemipo7@gmailcom
     try {
       await signInWithEmailAndPassword(auth, email, password);
-      navigate('/dashboard')
+      navigate('/dashboard');
     } catch (error) {
       console.error('Login failed ', error.message);
     }
