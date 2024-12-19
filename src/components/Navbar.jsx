@@ -3,7 +3,7 @@ import { useState } from "react";
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const closeMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
+    setIsMenuOpen(true);
   };
   return (
     <>
