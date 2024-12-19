@@ -2,7 +2,9 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
+  const closeMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
   return (
     <>
       <div
@@ -56,7 +58,7 @@ const Navbar = () => {
             className="p-4 hover:bg-sky-400
              hover:text-white transition-all cursor-pointer list-none w-full text-center "
           >
-            <Link to="/" className="z-10">
+            <Link to="/" className="z-10" onClick={closeMenu}>
               Home
             </Link>
           </li>
@@ -64,20 +66,20 @@ const Navbar = () => {
             className="p-4 hover:bg-sky-400
              hover:text-white transition-all cursor-pointer list-none w-full text-center "
           >
-            <Link to="/about">Who we are</Link>
+            <Link to="/about" onClick={closeMenu}>Who we are</Link>
           </li>
           <li
             className="p-4 hover:bg-sky-400
              hover:text-white transition-all cursor-pointer list-none w-full text-center "
           >
             {" "}
-            <Link to="/contact">Media</Link>
+            <Link to="/contact" onClick={closeMenu}>Media</Link>
           </li>
           <li
             className="p-4 hover:bg-sky-400
              hover:text-white transition-all cursor-pointer list-none w-full text-center "
           >
-            <Link to="/prayer" className="z-50">
+            <Link to="/prayer" className="z-50" onClick={closeMenu}>
               Prayer for salvation
             </Link>
           </li>
@@ -85,7 +87,7 @@ const Navbar = () => {
             className="p-4 hover:bg-sky-400
              hover:text-white transition-all cursor-pointer list-none w-full text-center ">
             {" "}
-            <Link to="/give">GIVE</Link>
+            <Link to="/give" onClick={closeMenu}>GIVE</Link>
           </li>
         </div>
       </div>
