@@ -1,7 +1,8 @@
-import { auth } from "../config/firebase";
+import { auth, db } from "../config/firebase";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { addDoc, collection } from "firebase/firestore";
 
 const SignUp = () => {
     const [email, setEmail] = useState("");
@@ -14,15 +15,19 @@ const SignUp = () => {
     e.preventDefault();
     if (password === reEntryPassword){
       try{
-          await createUserWithEmailAndPassword(auth, email, password);
+        await createUserWithEmailAndPassword(auth, email, password);
+        await addDoc(collection(db, "userInfo"),{userName:name, userEmail:email, userId: auth?.currentUser?.uid  });
+          
           console.log(name);
           navigate('/signin');
   
       } catch(error){
           console.error(error.message);
   
+        }
+      } else{
+        console.log("password dont match")
       }
-    }
 
 
     // Add your form submission logic here

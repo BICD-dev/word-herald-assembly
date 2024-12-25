@@ -1,7 +1,10 @@
 import background from "../assets/black_bg.jpg";
+import church from "../assets/church.png";
+import flyer from "../assets/flyer.png";
+import compound from "../assets/compound.png";
 import AOS from "aos";
-import "aos/dist/aos.css"; // You can also use <link> for styles
-import church from "../assets/image.png";
+import "aos/dist/aos.css";
+// import { motion } from "motion/react";
 
 const Home = () => {
   AOS.init();
@@ -19,6 +22,14 @@ const Home = () => {
           <b className="text-red-600 text-[6rem]"> Gospel </b>
         </h1>
       </div>
+      {/* flyer section */}
+      <section className="flex justify-center items-center">
+        <img
+          src={flyer}
+          alt="flyer"
+          className="mt-[3rem] h-[35rem] w-[1080px]"
+        />
+      </section>
       {/* announcement section */}
       <div className="mt-9 mx-6 " data-aos="fade-up">
         <h2 className="text-4xl font-semibold text-center ">Announcements</h2>
@@ -76,48 +87,64 @@ const Home = () => {
         </section>
       </div>
 
+      {/* upocoming events */}
       <div className="mx-6 mb-6 flex flex-col items-center md:items-stretch">
         <h1 className="text-4xl capitalize font-bold  text-center mb-12">
           upcoming events
         </h1>
-        <div className="grid grid-cols-1 gap-6 lg:grid-cols-3 md:grid-cols-2 ">
-          <section className="border border-solid border-[#7e7a7a] w-fit rounded-2xl overflow-hidden md:rounded-md">
-            <img src={church} alt="church_pic1" className="h-[15rem] w-full" />
-            <p className="p-4 text-center  text-xl">
-              Love Feast - Tuesday service
-            </p>
-            <p className="p-4 text-[15px] text-center font-light">
-              Physical meeting - Mellanby OSR
-            </p>
-          </section>
+        <section>
+          <div className="grid grid-cols-1 gap-6 lg:grid-cols-3 md:grid-cols-2 ">
+            <section className="border border-solid border-[#7e7a7a] w-fit rounded-2xl overflow-hidden md:rounded-md">
+              <img
+                src={church}
+                alt="church_pic1"
+                className="h-[15rem] w-full"
+              />
+              <p className="p-4 text-center  text-xl">
+                Love Feast - Tuesday service
+              </p>
+              <p className="p-4 text-[15px] text-center font-light">
+                Physical meeting - Mellanby OSR
+              </p>
+            </section>
 
-          <section className="border border-solid border-[#5c5656] w-fit rounded-2xl overflow-hidden md:rounded-md">
-            <img src={church} alt="church_pic1" className="h-[15rem] w-full" />
-            <p className="p-4 text-center  text-xl">
-              Celebration service - Sunday service
-            </p>
-            <p className="p-4 text-[15px] text-center font-light">
-              Physical meeting - Mellanby OSR
-            </p>
-          </section>
+            <section className="border border-solid border-[#5c5656] w-fit rounded-2xl overflow-hidden md:rounded-md">
+              <img
+                src={church}
+                alt="church_pic1"
+                className="h-[15rem] w-full"
+              />
+              <p className="p-4 text-center  text-xl">
+                Celebration service - Sunday service
+              </p>
+              <p className="p-4 text-[15px] text-center font-light">
+                Physical meeting - Mellanby OSR
+              </p>
+            </section>
 
-          <section className="border border-solid border-[#5c5656] w-fit rounded-2xl overflow-hidden md:rounded-md">
-            <img src={church} alt="church_pic1" className="h-[15rem] w-full" />
-            <p className="p-4 text-center  text-xl">
-              Prayer meeting - Friday service
-            </p>
-            <p className="p-4 text-[15px] text-center font-light">
-              Physical meeting - Chapel
-            </p>
-          </section>
-        </div>
+            <section className="border border-solid border-[#5c5656] w-fit rounded-2xl overflow-hidden md:rounded-md">
+              <img
+                src={church}
+                alt="church_pic1"
+                className="h-[15rem] w-full"
+              />
+              <p className="p-4 text-center  text-xl">
+                Prayer meeting - Friday service
+              </p>
+              <p className="p-4 text-[15px] text-center font-light">
+                Physical meeting - Chapel
+              </p>
+            </section>
+          </div>
+        </section>
       </div>
+
       {/* short intro to pastors */}
-      <div className="px-6">
+      <div className="px-6 mb-10">
         <h1 className="text-4xl font-bold  text-left mb-2">
           We&apos;re Glad You Found Us
         </h1>
-        <p className="text-xl font-light">
+        <p className="text-xl font-semibold text-gray-500">
           We are Pastor Rebecca surname and Pastor Ay surname, the Presiding
           Pastor and the assistant pastor of WHA and we are so excited to
           connect with you through this website. It is not an accident that you
@@ -126,12 +153,30 @@ const Home = () => {
         </p>
       </div>
 
-      {/* taking you to the telegram sermos page */}
-      <div className="flex w-full justify-center">
-        <button className="font-bold w-1/3 py-2 px-4 mt-5 mb-2 bg-red-600 sm:mb-[9rem] text-white rounded-md hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
-          Latest Sermon
-        </button>
-      </div>
+      {/* service times */}
+      <div className=" text-white px-10 mb-4 flex flex-col justify-center items-center bg-cover"
+  style={{ backgroundImage: `url(${compound})` }}>
+    
+
+  {/* Content */}
+  <div className="text-center">
+    <h1 className="text-[3rem] font-bold mb-4">Service Times</h1>
+    <section className="leading-8 text-[1.2rem] mb-4 font-semibold">
+      <p>Sundays {"(celebrate Jesus)"} | 12:30pm - 3:00pm</p>
+      <p>Tuesdays {"(Bible study)"} | 6:00pm - 8:00pm</p>
+      <p>Fridays {"(Prayer meeting)"} | 7:00pm - 8:00pm</p>
+    </section>
+    <section className="flex flex-col items-center md:grid md:grid-cols-2 md:gap-8 mb-4">
+      <button className="font-bold w-[6rem] py-3 px-4 bg-red-600 mb-4 sm:mb-[9rem] text-white hover:bg-white hover:text-black focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2">
+        Latest Sermon
+      </button>
+      <button className="font-bold w-[6rem] py-3 px-4 bg-transparent border border-solid text-white sm:mb-[9rem] hover:bg-red-700 hover:border-red-600 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2">
+        Learn more
+      </button>
+    </section>
+  </div>
+</div>
+
     </>
   );
 };

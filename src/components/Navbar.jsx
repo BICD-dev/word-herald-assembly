@@ -3,7 +3,7 @@ import { useState } from "react";
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const closeMenu = () => {
-    setIsMenuOpen(true);
+    setIsMenuOpen(false);
   };
   return (
     <>
@@ -47,7 +47,7 @@ const Navbar = () => {
         </i>
 
         <div
-          className={`absolute lg:hidden top-24 left-0 w-full  bg-white flex flex-col items-center gap-6 font-semibold text-lg
+          className={`absolute lg:hidden top-24 left-0 w-full z-30 bg-white flex flex-col items-center gap-6 font-semibold text-lg
           transform transition-transform ${
             isMenuOpen ? "opacity-100 flex" : "opacity-0 hidden"
           }`}
